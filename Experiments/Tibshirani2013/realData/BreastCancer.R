@@ -4,11 +4,11 @@
 #source("http://www.bioconductor.org/biocLite.R")
 #biocLite("GEOquery")
 
-#install.packages(ggplot2)
-#install.packages(glmnet)
-#install.packages(grplasso)
-#install.packages(GSA)
-
+#install.packages("ggplot2")
+#install.packages("glmnet")
+#install.packages("grplasso")
+#install.packages("GSA")
+#install.packages("SGL")
 ## This function is used to mean impute the missing data
 
 mean.impute <- function(X){
@@ -36,7 +36,7 @@ library("GSA")
 
 ## This grabs the data from bioconductor
 
-gds807 <- getGEO('GDS807', destdir = "~/readingSoft/")
+gds807 <- getGEO('GDS807')
 
 ## This preprocesses it
 
@@ -122,7 +122,7 @@ test.pred.GL <- exp(test.pred.GL) / (1 + exp(test.pred.GL))
 
 fit <- glmnet(train.data$x, train.data$y, family = "binomial", lambda.min.ratio = 0.1) # 0.01?
 
-test.pred <- predict(fit, test.data$x, type = "class")-1
+test.pred <- predict(fit, test.data$x, type = "class")
 
 fitSGL <- SGL(train.data, membership.index, type = "logit", verbose = TRUE, nlam = 100, min.frac = 0.1, alpha = 0.05) 
 
@@ -166,7 +166,7 @@ c.lambda <- c(1:100, 1:100,1:100)
 
 ## We plot the results
 
-#pdf("cancer.pdf")
+pdf("cancer.pdf")
 dd <- data.frame(Method = Method, x = c.lambda, y = c.class)
 
 ggplot(data = dd, aes(x = x, y = y, group = Method, shape = Method)) + geom_line(aes(linetype=Method), size = 1.5) + scale_y_continuous("Correct Classification Rate") + scale_x_continuous("Lambda Index") + opts(title = "Correct Classification Rate for Cancer Data",legend.text = theme_text(size = 20), plot.title = theme_text(size = 22), axis.title.x = theme_text(size = 20), axis.title.y = theme_text(size = 20, angle = 90)) + scale_linetype_manual(values=c("twodash","dotted","solid")) + opts(legend.key.size = unit(2,"cm"))

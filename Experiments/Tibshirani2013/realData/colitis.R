@@ -14,7 +14,7 @@ library(GSA)
 
 ### This is the code used to analyze the Cancer dataset in the manuscript
 
-gds1615 <- getGEO('GDS1615', destdir = "~/readingSoft/")
+gds1615 <- getGEO('GDS1615')
 
 ## This preprocesses it
 
@@ -94,14 +94,14 @@ test.pred.GL <- exp(test.pred.GL) / (1 + exp(test.pred.GL))
 
 fit <- glmnet(train.data$x, train.data$y, family = "binomial", lambda.min.ratio = 0.01) 
 
-test.pred <- predict(fit, test.data$x, type = "class")-1
+test.pred <- predict(fit, test.data$x, type = "class")
 
 fitSGL <- SGL(train.data, membership.index, type = "logit", verbose = TRUE, nlam = 100, min.frac = 0.01, alpha = 0.05) #0.01?
 
 test.pred.SGL <- matrix(NA, ncol = length(fitSGL$lambdas), nrow = length(test.data$y))
 
 for(i in 1:length(fitSGL$lambdas)){
-  test.pred.SGL[,i] <- predict(fitSGL,test.data$x,i)
+  test.pred.SGL[,i] <- predict(fitSGL$X.transform,test.data$x,i)
 }
 
 ## We see how well each model performed
