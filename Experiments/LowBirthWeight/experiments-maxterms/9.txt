@@ -1,0 +1,17 @@
+Settings:
+151:38 split
+Monomial power = 3
+Linear functions, constant
+Modeler: Cp
+Regularizer: 1
+Builder: 0
+Maxterms: 9
+
+Results:
+Cp = 0.944E+05 with birthwt =  - 0.10E+03 * age - 0.99E+03 * race - 0.32E+03 * smoke - 0.70E+03 * hypertension + 0.43E-01 * age^3 + 0.49E-04 * weight^3 + 62. * race^3 - 0.63E+03 * uterine^3 + 0.60E+04
+
+Linear: age, race, smoke, hypertension
+Cubic: age, weight, race, uterine 
+Excluded overall: prematurelabors, numvisits
+
+Defaults: age   weight  race  smoke   prematurelabors   hypertension    uterine    numvisits

@@ -1,0 +1,19 @@
+Settings:
+151:38 split
+Monomial power = 1
+Linear functions, constant
+Modeler: Cp
+Regularizer: 1
+Builder: 0
+Maxterms: -
+
+Results:
+ Cp = 0.967E+05 with birthwt =  - 9.4 * age + 2.5 * weight - 0.20E+03 * race - 0.31E+03 * smoke - 0.71E+03 * hypertension - 0.64E+03 * uterine + 0.36E+04
+
+Excluded overall: numvisits
+
+Defaults: age   weight  race  smoke   prematurelabors   hypertension    uterine    numvisits
+
+comments: 
+model matches that of paper
+Cp is lower tham that of paper
