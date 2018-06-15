@@ -1,0 +1,19 @@
+ ***************************************************************************
+ ALAMO version 2018.4.3. Built: LNX-64 Tue Apr 3 21:46:10 EDT 2018 
+
+ If you use this software, please cite:
+ Cozad, A., N. V. Sahinidis and D. C. Miller,
+ Automatic Learning of Algebraic Models for Optimization,
+ AIChE Journal, 60, 2211-2227, 2014.
+
+ ALAMO is powered by the BARON software from http://www.minlp.com/
+ ***************************************************************************
+ Licensee: Aditya Chindhade at CMU, achindha@andrew.cmu.edu.
+ ***************************************************************************
+ Reading input data
+ Checking input consistency and initializing data structures
+ MONO power not found in line 17
+ 
+ ALAMO terminated with termination code 110 
+ All powers in group definitions must appear in user-specified basis functions.
+ ***************************************************************************

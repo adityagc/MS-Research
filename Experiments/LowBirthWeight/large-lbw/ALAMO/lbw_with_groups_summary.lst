@@ -1,0 +1,72 @@
+ ***************************************************************************
+ ALAMO version 2018.4.3. Built: LNX-64 Tue Apr 3 21:46:10 EDT 2018 
+
+ If you use this software, please cite:
+ Cozad, A., N. V. Sahinidis and D. C. Miller,
+ Automatic Learning of Algebraic Models for Optimization,
+ AIChE Journal, 60, 2211-2227, 2014.
+
+ ALAMO is powered by the BARON software from http://www.minlp.com/
+ ***************************************************************************
+ Licensee: Aditya Chindhade at CMU, achindha@andrew.cmu.edu.
+ ***************************************************************************
+ Reading input data
+ Checking input consistency and initializing data structures
+ Warning: GAMS is not selected for MIP optimization. Turning on enumeration.
+ 
+ Step 0: Initializing data set
+ User provided an initial data set of 189 data points
+ We will sample no more data points at this stage
+ ***************************************************************************
+ Iteration 1 (Approx. elapsed time 0.20E-01 s)
+ 
+ Step 1: Model building using Mallow's Cp
+ 
+ Model building for variable Z1
+ ----
+ Cp = -20.5 with Z1 = 2.9
+ ----
+ Cp = -31.9 with Z1 =  - 0.58 * ui + 3.0
+ ----
+ Cp = -37.3 with Z1 = 0.31 * white - 0.57 * ui + 2.9
+ ----
+ Cp = -45.9 with Z1 = 0.43 * white - 0.40 * smoke - 0.53 * ui + 3.0
+ ----
+ Cp = -48.1 with Z1 = 0.41 * white - 0.39 * smoke - 0.47 * ht - 0.56 * ui + 3.0
+ ----
+ Cp = -50.1 with Z1 = 1.6 * lwt1 + 0.39 * white - 0.37 * smoke - 0.58 * ht - 0.52 * ui + 3.0
+ ----
+ Cp = -51.7 with Z1 = 1.5 * age2 + 1.6 * lwt1 + 0.38 * white - 0.36 * smoke - 0.56 * ht - 0.51 * ui + 3.0
+ ----
+ Cp = -52.7 with Z1 = 1.4 * age2 + 1.5 * lwt1 + 0.36 * white - 0.33 * smoke - 0.30 * ptl1 - 0.54 * ht - 0.49 * ui + 3.0
+ ----
+ Cp = -53.5 with Z1 = 1.5 * age2 + 1.6 * lwt1 + 1.3 * lwt3 + 0.37 * white - 0.32 * smoke - 0.31 * ptl1 - 0.54 * ht - 0.45 * ui + 3.0
+ 
+ Calculating quality metrics on observed data set.
+ 
+ Quality metrics for output Z1
+ -----------------------------
+ SSE OLR:           68.1
+ SSE:               70.5
+ RMSE:              0.611
+ R2:                0.295
+ R2 adjusted:       0.259
+ Model size:        9
+ BIC:               -139.
+ Cp:                -53.5
+ AICc:              -167.
+ HQC:               -156.
+ MSE:               0.394
+ SSEp:              70.5
+ RIC:               168.
+ MADp:              189.
+ 
+ Total execution time 2.5 s
+ Times breakdown
+     OLR time:        1.7 s in 109294 ordinary linear regression problem(s)
+     MIP time:        0.0 s in 0 quadratic integer problem(s)
+     Simulation time: 0.0 s to simulate 0 point(s)
+     All other time:  0.74 s in 1 iteration(s)
+ 
+ Normal termination
+ ***************************************************************************
