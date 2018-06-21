@@ -1,5 +1,15 @@
 \begin{thebibliography}{1}
 
+\bibitem{tibshirani1996regression}
+R.~Tibshirani, ``Regression shrinkage and selection via the lasso,'' {\em
+  Journal of the Royal Statistical Society. Series B (Methodological)},
+  pp.~267--288, 1996.
+
+\bibitem{hoerl1970ridge}
+A.~E. Hoerl and R.~W. Kennard, ``Ridge regression: Biased estimation for
+  nonorthogonal problems,'' {\em Technometrics}, vol.~12, no.~1, pp.~55--67,
+  1970.
+
 \bibitem{yuan2006model}
 M.~Yuan and Y.~Lin, ``Model selection and estimation in regression with grouped
   variables,'' {\em Journal of the Royal Statistical Society: Series B

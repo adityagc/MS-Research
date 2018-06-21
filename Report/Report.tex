@@ -11,11 +11,13 @@
 	
 	\newpage
 	\pagenumbering{arabic}
-	\section{Sure.  I think one way to think about all this is the group lasso is also sometimes called the sum of norms.  Just think of two 	groups \theta^{(1)}, \theta^{(2)}, i.e., \theta = [\theta^{(1)}; \theta^{(2)}].  The group lasso penalty applied to \theta is	 		roughly ||\theta^{(1)}||_2 + ||\theta^{(2)}||_2, which is a sum of norms.  Since norms are nonnegative, you can think of this as the 		L1 norm applied to [||\theta^{(1)}||_2; ||\theta^{(2)}||_2] ... so again we can see that the group lasso is kind of like the lasso 		but 		working at the group level, i.e., enforcing sparsity at the group level.  Does that make sense?}
+	\section{Abstract}
 	
 	\newpage
 	\section{Introduction}
-	\cite{yuan2006model}
+	Structured sparsity regularization refers to a class of statistical techniques that extend the sparsity-based regularization methods such as the Lasso\cite{tibshirani1996regression}. Whereas regularization techniques such as the Ridge \cite{hoerl1970ridge} seek to minimize the *insert formula*, which shrinks the coefficients corresponding to *TIKONOV INSERT*, the Lasso induces sparsity in the coefficient vector, setting the deselected coefficients to exactly 0. This has various advantages such as model interpretability, computational efficiency and reduction of dimentionality.
+	
+	The group lasso was first introduced in 2006 \cite{yuan2006model} as a technique to select groups of predictors.
 
 	\newpage
 	\section{Group Lasso}
