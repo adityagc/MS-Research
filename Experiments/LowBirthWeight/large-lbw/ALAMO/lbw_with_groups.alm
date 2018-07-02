@@ -6,7 +6,8 @@ xmax 2.995369876192700009e-01 6.599831370883370019e-01 6.181971336808470552e-01 
 print_to_file 1
 ! gams gams
 trace 1
-builder 1
+! builder 1
+ncvf 4
 ! regularizer 1
 ! backstepper 1
 ! solvemip 1
@@ -57,17 +58,16 @@ begin_groupcon
 7 1 xcl 8
 8 1 xcl 7
 
-
 10 1 req 11
 11 1 req 10
 
-14 1 atl 1
+! 14 1 atl 1
 14 1 req 15 16
 15 1 req 14 16
 16 1 req 14 15
 end_groupcon
 
-modeler 2
+modeler 5
 
 ! mono 16
 ! monomialpower 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
